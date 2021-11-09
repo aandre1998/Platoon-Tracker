@@ -1,5 +1,6 @@
 import EquipmentData from '../models/equipment.js';
 
+
 export const getEquipment = async (req, res)=> {
     try {
         const allEquipment = await EquipmentData.find();
@@ -9,6 +10,7 @@ export const getEquipment = async (req, res)=> {
         res.status(404).json({message: error.message});
     }
 }
+
 
 export const createEquipment = async (req, res)=> {
     const equipment = req.body;
@@ -22,6 +24,7 @@ export const createEquipment = async (req, res)=> {
         res.status(409).json({message: error.message});
     }
 }
+
 
 export const deleteEquipment = async (req, res)=> {
     const id = req.params.id;

@@ -6,6 +6,7 @@ import Sections from './components/dashboard/sections.js';
 import './App.css';
 import useStyles from './styles';
 
+
 function App() {
   const classes = useStyles();
   document.body.style = 'background: Gainsboro;';

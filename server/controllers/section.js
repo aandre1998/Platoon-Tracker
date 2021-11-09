@@ -1,5 +1,6 @@
 import SectionData from '../models/section.js';
 
+
 export const getSection = async (req, res)=> {
     try {
         const allSections = await SectionData.find();
@@ -9,6 +10,7 @@ export const getSection = async (req, res)=> {
         res.status(404).json({message: error.message});
     }
 }
+
 
 export const createSection = async (req, res)=> {
     const section = req.body;
@@ -22,6 +24,7 @@ export const createSection = async (req, res)=> {
         res.status(409).json({message: error.message});
     }
 }
+
 
 export const deleteSection = async (req, res)=> {
     const id = req.params.id;
